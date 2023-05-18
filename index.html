@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>VIDEOJUEGO</title>
+
+</head>
+<body style="background-color: rgb(162, 177, 177);">
+     
+    <div>
+        <h3>Cambio de color de fondo</h3>
+      <button onclick="cambiarColor()">Cambiar color</button>
+    </div>
+    
+    <br>
+    <br>
+    
+        <div class="container">
+            <center>
+            <div class="col-sm-12 col-md-12">
+                 
+            <div class="divider-custom divider-light">
+                <h1>Nombre del Videojuego:</h1>
+                <h2 id="miParrafo">LEFT FOR DEAD</h2>
+                <button onclick="cambiarDTexto()">Cambiar texto</button>
+                        </div>
+                </div>
+             </center>
+
+                 
+        </div>
+    
+
+    
+        <div class="container">
+            <center>
+            <div class="col-sm-12 col-md-12">
+                 
+            <div class="divider-custom divider-light">
+                <h1>Año de publicación:</h1>
+                <h2>El desarrollo del juego se completó el 13 de noviembre de 2008.</h2>
+                        </div>
+                </div>
+             </center>
+
+                 
+        </div>
+    
+   
+    
+        <div class="container">
+            <center>
+            <div class="col-sm-12 col-md-12">
+                 
+            <div class="divider-custom divider-light">
+                <h1>Productor/Editorial:</h1>
+                <h2>Valve Corporation, Turtle Rock Studios y Certain Affinity</h2>
+                <h2>UPWAKE y My.com</h2>
+                        </div>
+                </div>
+             </center>
+
+                 
+        </div>
+    
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="divider-custom divider-light">
+                        <center>
+                            <h1>Mi Imagen:</h1>
+
+                        <img id="imagen" src="img/left.jpg" alt="" width="428px"><br>
+                        <button onclick="cambiarAtributo()">Cambiar imagen</button>
+                        <button onclick="cambiarOriginal()">Volver a Imagen Orginal</button>
+
+                    </center>            
+                    </div>
+                        </div>        
+        </div>
+    </div>
+    
+
+
+        <div class="container">
+            <center>
+            <div class="col-sm-12 col-md-12">
+                 
+            <div class="divider-custom divider-light">
+                
+                <h1>Reseña:</h1>
+                <h2>Es que este juego trata basicamente de cargar armas para poder hacer la matanza de zombis.</h2>
+                        </div>
+                </div>
+             </center>
+
+                 
+        </div>
+    
+
+    
+        <div class="container">
+            <center>
+            <div class="col-sm-12 col-md-12">
+                 
+            <div class="divider-custom divider-light">
+                <h1>Clasificación</h1>
+                <h2 id="mensaje">Hola mundo</h2>
+                <h2>ESRB: M BBFC: 18 OFLC: MA 15+ PEGI: 18+ USK: 18.</h2>
+                <button onclick="ocultarMensaje()">Ocultar mensaje</button>
+
+                        </div>
+                </div>
+             </center>
+
+                 
+        </div>
+
+
+        <div class="container">
+            <center>
+            <div class="col-sm-12 col-md-12">
+                 
+            <div class="divider-custom divider-light">
+                <h1>Boton para escribir en el DIV</h1>
+                <div id="miDiv"></div>
+                <button onclick="escribirTexto()">Escribir texto</button>
+
+                        </div>
+                </div>
+             </center>
+
+                 
+        </div>
+            
+
+        
+        <script>
+            function cambiarColor() {
+              var colores = ["#ff0000", "#00ff00"]; 
+              var colorAleatorio = colores[Math.floor(Math.random() * colores.length)]; 
+        
+              document.body.style.backgroundColor = colorAleatorio; 
+            }
+          </script>
+
+<script>
+    function cambiarDTexto() {
+      var nuevoTexto = "Actualización de Juego ahora se llamara Left for Dead 2";
+       // Cadena predefinida
+
+      var parrafo = document.getElementById("miParrafo"); 
+      parrafo.textContent = nuevoTexto; 
+    }
+    </script>
+
+
+<script>
+    function cambiarAtributo() {
+        document.getElementById("imagen").src = "img/brr.jpg";
+    }
+</script>
+
+<script>
+    function cambiarOriginal() {
+        document.getElementById("imagen").src = "img/left.jpg";
+    }
+</script>
+
+<script>
+    function ocultarMensaje() {
+      var mensaje = document.getElementById("mensaje"); 
+      mensaje.style.display = "none"; 
+    }
+  </script>
+
+
+<script>
+    function escribirTexto() {
+      var div = document.getElementById("miDiv"); 
+
+      var h1 = document.createElement("h1"); 
+      h1.textContent = "Este texto no lo escribió Josue Jimenez, lo escribió JavaScript"; 
+
+      div.appendChild(h1); 
+    }
+  </script>
+
+</body>
+</html>
